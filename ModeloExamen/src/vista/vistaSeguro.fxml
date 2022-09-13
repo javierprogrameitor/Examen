@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="809.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/8.0.341" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlador.VistaController">
+   <children>
+      <Label layoutX="64.0" layoutY="84.0" text="N.I.F" />
+      <Label layoutX="64.0" layoutY="221.0" text="NOMBRE" />
+      <Label layoutX="64.0" layoutY="285.0" text="APELLIDOS" />
+      <Label layoutX="64.0" layoutY="358.0" text="POBLACION" />
+      <Label layoutX="429.0" layoutY="66.0" text="VEHICULO" />
+      <Label layoutX="353.0" layoutY="147.0" text="MARCA" />
+      <Label layoutX="353.0" layoutY="221.0" text="MODELO" />
+      <Label layoutX="560.0" layoutY="285.0" text="PRECIO" />
+      <Label layoutX="525.0" layoutY="358.0" text="COMPAÑIA" />
+      <Label layoutX="695.0" layoutY="58.0" text="FECHA INICIO" />
+      <Label layoutX="695.0" layoutY="155.0" text="FECHA FINAL" />
+      <Label layoutX="769.0" layoutY="285.0" text="TIPO" />
+      <TextField fx:id="txtNIF" layoutX="100.0" layoutY="80.0" />
+      <TextField fx:id="txtNombre" layoutX="136.0" layoutY="217.0" prefHeight="24.0" prefWidth="191.0" />
+      <TextField fx:id="txtApellidos" layoutX="146.0" layoutY="281.0" prefHeight="24.0" prefWidth="355.0" />
+      <TextField fx:id="txtPoblacion" layoutX="146.0" layoutY="354.0" prefHeight="24.0" prefWidth="355.0" />
+      <ComboBox fx:id="cmbVehiculos" layoutX="377.0" layoutY="92.0" onAction="#cargarVehiculos" prefWidth="150.0" />
+      <DatePicker fx:id="dtkpInicio" layoutX="650.0" layoutY="92.0" />
+      <DatePicker fx:id="dtkpFinal" layoutX="658.0" layoutY="196.0" />
+      <TextField fx:id="txtPrecio" layoutX="613.0" layoutY="281.0" prefHeight="24.0" prefWidth="128.0" />
+      <TextField fx:id="txtTipo" layoutX="814.0" layoutY="281.0" prefHeight="24.0" prefWidth="89.0" />
+      <TextField fx:id="txtCompañia" layoutX="628.0" layoutY="354.0" prefHeight="24.0" prefWidth="334.0" />
+      <TableView fx:id="tblwiSeguros" layoutX="57.0" layoutY="431.0" prefHeight="253.0" prefWidth="912.0" style="-fx-background-color: blue;">
+        <columns>
+          <TableColumn fx:id="tblCodigo" prefWidth="67.0" text="CÓDIGO" />
+          <TableColumn fx:id="tblNif" prefWidth="102.0" text="N.I.F" />
+            <TableColumn fx:id="tblNombre" prefWidth="138.0" text="NOMBRE" />
+            <TableColumn fx:id="tblApellidos" prefWidth="94.0" text="APELLIDOS" />
+            <TableColumn fx:id="tblMatricula" prefWidth="147.0" text="MATRÍCULA" />
+            <TableColumn fx:id="tblInicio" prefWidth="87.0" text="F.INICIO" />
+            <TableColumn fx:id="tblFin" prefWidth="125.0" text="F.FIN" />
+            <TableColumn fx:id="tblPvp" prefWidth="82.0" text="P.V.P" />
+            <TableColumn fx:id="tblTipo" prefWidth="69.0" text="TIPO" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnGrabarSeguro" layoutX="408.0" layoutY="707.0" mnemonicParsing="false" onAction="#grabarSeguro" prefHeight="72.0" prefWidth="245.0" text="GRABAR SEGURO" />
+      <TextField fx:id="txtMarca" layoutX="411.0" layoutY="143.0" />
+      <TextField fx:id="txtModelo" layoutX="411.0" layoutY="217.0" />
+   </children>
+</AnchorPane>
